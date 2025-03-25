@@ -1,0 +1,135 @@
+/* General Page Styling */
+body {
+    font-family: 'Pacifico', cursive;
+    background-color: #fac0b0;
+    background-image: url('background2.jpeg'); 
+    background-size: 80%;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Parent Grid Container- implementing grid container of 3 columns */
+.task-manager {
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr 0.8fr;  /* Three columns */
+    /*gap: 2px;  /* Space between columns */
+    width: 80%;
+    max-width: 900px;
+    /*transition: transform 0.3s ease-in-out;
+    align-items:center;
+    justify-content:center;
+    position:relative;*/
+}
+
+/* Task Input Container */
+.container {
+    background: linear-gradient(to bottom, #ff9966, #cc3366, #cc334a);
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid #900C3F;
+    box-shadow: 8px 8px 0px #a1626093;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    grid-column: 1; /* Centered in the grid */
+}
+
+/* Task List Container */
+#taskContainer {
+    margin-left: 20px;
+    transform: translateX(-40px);
+    background: white;
+    border: 3px solid #900C3F;
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    /*display: none;
+    transition: transform 0.3s ease-in-out;*/
+    grid-column: 3; /* Right side in the grid */
+}
+
+
+
+/* Task Input Fields */
+.task-input input, 
+.task-input textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* Task List Items */
+.task {
+    background: #ffe0e0;
+    border: 3px solid #900C3F;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Task Buttons- all buttons formatting*/
+button {
+    background: linear-gradient(to bottom, #e98b8d, #ff5e62);
+    border: 2px solid #900C3F;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 4px 4px 0px #900C3F; /* Initial shadow */
+}
+
+/* Hover Effect - Slight Lift */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px #900C3F; /* Makes it look raised */
+}
+
+/* Click (Active) Effect - Dipping Down */
+button:active {
+    transform: translateY(4px);  /* Moves the button down */
+    box-shadow: 2px 2px 0px #900C3F; /* Smaller shadow to mimic pressing */
+}
+
+/* Custom Cursor */
+body, 
+button, 
+.container, 
+#taskContainer, 
+.task, 
+#closeTaskBox {
+    cursor: url('cursor_imresizer.png'), auto; /* Replace with your image */
+}
+/* Filters Section */
+.filters {
+    display: flex;
+    flex-direction: column;;
+    /* transform: translate(-50%, -50%); 
+    gap: 10px; /* Space between buttons */
+    gap: 10px;
+    /*z-index: 5;  Ensure it stays on top */
+    align-items: center; /* Keep buttons aligned in center */
+    justify-content: center;
+    grid-column: 2;
+}
+
+
+

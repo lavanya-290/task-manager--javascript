@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<!--html of a task manager with input field, task list and filter 
+buttons. -->
+<body>
+    <!--grid layout for the task manager-->
+    <div class="task-manager">
+        <!--task input section-->
+        <div class="container" id="taskInputContainer">
+            <h1>Task Manager</h1>
+            <!--input fields of task name and description-->
+            <div class="task-input">
+                <input type="text" id="taskName" placeholder="Task Name">
+                <textarea id="taskDesc" placeholder="Task Description"></textarea>
+                <button id="addTask">🍓 Add Task</button><!--button for adding task-->
+            </div>
+        </div>
+
+        <!-- Task List Container -->
+        <div id="taskContainer">
+            <h2>Task List</h2>
+            <ul id="taskList"></ul><!--tasks will be displayed here-->
+        </div>
+    </div>
+
+    <!-- the filter buttons section (all, done,pending buttons) -->
+    <div class="filters">
+        <button id="showAll">All</button>
+        <button id="showPending">Pending</button>
+        <button id="showCompleted">Done</button>
+    </div>
+    <!--linking the js file-->
+    <script src="script.js"></script>
+</body>
+</html>
